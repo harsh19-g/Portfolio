@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a3ce38fd73.js" crossorigin="anonymous"></script>
+</head>
+    <div id="header" class="parallex">
+        <div class="container">
+            <nav>
+                <!-- <img src="images/logo.png" alt="" class="logo"> -->
+                <h1>Harsh.</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Frontend Developer</p>
+                <h1>Hi, I am <span>Harsh</span> Gupta.</h1>
+            </div>
+        </div>
+    </div>
+    <!------------about-------------- -->
+    <div id="about" class="parallex">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/About.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Aspiring Software Engineer seeking an entry-level role to further develop and explore my technical skills. Proficient in C++,
+                        HTML, CSS, and JavaScript and ReactJs with a strong understanding of problem-solving principles. Able to effectively translate business
+                        requirements into innovative software solutions. Possess excellent teamwork, interpersonal, and communication skills.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>JavaScript</span></li>
+                            <li><span>ReactJs</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Web Development</span><br>1 years</li>
+                            <li><span>Machine Learning </span><br>3 months</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span><br>B.Tech From BBDNIIT</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------portfolio------------- -->
+    <div id="portfolio" class="parallex">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/Textutils.jpg" alt="">
+                    <div class="layer">
+                        <h3>WordWeaver</h3>
+                        <p>Crafted a text conversion website, enriching it with a wide array of features such as transforming text to uppercase and
+                            lowercase, copying text, and clearing content.</p>
+                        <p><b>Tech Stack:-</b> Bootstarp, JavaScript, ReactJs</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/weather-app.png" alt="">
+                    <div class="layer">
+                        <h3>Weather App</h3>
+                        <p>This Weather App tells the temperature of any country or city and also tells there wind speed and Humidity.</p>
+                        <p><b>Tech Stack:-</b> CSS,JavaScript, ReactJs, openweathermap API</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/chat-app.jpg" alt="">
+                    <div class="layer">
+                        <h3>Messenger</h3>
+                        <p>A messenger App clone with the functionalities of updating profile picture, login in/out and also with the notification icons.</p>
+                        <p><b>Tech Stack:-</b> CSS,JavaScript,ReactJs,Firebase</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!-- --------------contact----------------->
+    <div id="contact" class="parallex">
+        <div class="container">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>harshgupta1941@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+91-6392682530</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/harsh-gupta-91a487291"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/harsh19-g"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="https://instagram.com/newg.ai?igshid=MWMzaHY3azFzenY4Yw=="><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+                <a href="images/Harsh Gupta-Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @ Harsh Gupta</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByName("tab-links");
+        var tabcontents = document.getElementsByName("tab-contents");
+
+        function opentab(tabname) {
+            var tablinks = document.querySelectorAll(".tab-links");
+            var tabcontents = document.querySelectorAll(".tab-contents");
+
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+                tabcontents[i].classList.remove("active-tab");
+            }
+
+            for (var i = 0; i < tabcontents.length; i++) {
+                if (tabcontents[i].id === tabname) {
+                    tablinks[i].classList.add("active-link");
+                    tabcontents[i].classList.add("active-tab");
+                }
+            }
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzOYiJQSRglYUzGdzKkr-LxE5toART_CZxSoaEc_tlJ0RH9FBgqCOFGwBIrHri4T9Ua/exec';
+    const form = document.querySelector('form[name="submit-to-google-sheet"]');
+    const msg = document.getElementById('msg');
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          if (response.ok) {
+            msg.innerHTML = 'Message Sent Successfully';
+            setTimeout(() => {
+              msg.innerHTML = '';
+            }, 5000);
+            form.reset();
+          } else {
+            throw new Error('Network response was not ok.');
+          }
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          msg.innerHTML = 'Error occurred while sending the message';
+          setTimeout(() => {
+            msg.innerHTML = '';
+          }, 2000);
+        });
+    });
+  </script>
+  
+</body>
+</html>
