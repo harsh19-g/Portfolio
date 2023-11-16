@@ -316,7 +316,7 @@ nav .fa-solid{
 /* ----------------Responsive------------ */
 @media only screen and (max-width:600px){
     #header{
-        background-image: url(images/mobile\ About.png);
+        background-image: url(images/mobile.png);
     }
     nav h1{
         font-size: 50px;
